@@ -4,7 +4,7 @@ const pgClient = new Client({
   connectionString: "postgresql://neondb_owner:xxxxxxxxxxxxxxxx@ep-muddy-mouse-ad2urasj-pooler.c-2.us-east-1.aws.neon.tech/neondb?sslmode=require"
 });
 
-//  const pgClient = new Client({
+//  const pgClient = new Client({f
 //     user: "neondb_owner",
 //     password: "xxxxxxxxxxxxxxxx",
 //     port: 5432,
