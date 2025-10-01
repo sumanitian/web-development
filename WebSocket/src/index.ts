@@ -26,26 +26,39 @@ const wss = new WebSocketServer({ port: 8080 });
 // after connecting you will see hello in the message section of postman
 
 
-wss.on("connection", function (socket){
-    console.log("Connected");
-    setInterval(() => {
-        socket.send("Current price of solana is " + Math.random());
-    }, 500);
+// wss.on("connection", function (socket){
+//     console.log("Connected");
+//     setInterval(() => {
+//         socket.send("Current price of solana is " + Math.random());
+//     }, 500);
     
-})
+// })
 
 // after every 500ms you will see the message in postman.
 
 
+// wss.on("connection", function (socket){
+//     console.log("Connected");
+//     setInterval(() => {
+//         socket.send("Current price of solana is " + Math.random());
+//     }, 500);
+
+//     // how can client talk to server
+//     socket.on("message", (e) =>{
+//         console.log(e.toString());
+//     })
+    
+// })
+
 wss.on("connection", function (socket){
-    console.log("Connected");
-    setInterval(() => {
-        socket.send("Current price of solana is " + Math.random());
-    }, 500);
+    console.log("Connected")
+    
 
     // how can client talk to server
     socket.on("message", (e) =>{
-        console.log(e.toString());
+        if(e.toString() === "Ping"){
+            socket.send("Pong"); 
+        }
     })
     
 })
