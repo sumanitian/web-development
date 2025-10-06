@@ -15,7 +15,7 @@ export async function POST(req: NextRequest) {
 
     try {
         // Creating a new user record in the database using Prisma
-        await prismaClient.user.create({
+        await prismaClient.User.create({
             data: {
                 username: data.username, // Storing the username
                 password: data.password  // Storing the password (Note: Ideally, passwords should be hashed before saving)
@@ -43,8 +43,8 @@ export async function POST(req: NextRequest) {
  */
 export async function GET() {
     // Retrieving the first user from the database
-    const user = await prismaClient.user.findFirst({});
+    const User = await prismaClient.User.findFirst({});
     
     // Returning the user's name and email in the response (Assuming email is stored in the username field)
-    return Response.json({ name: user?.username, email: user?.username });
+    return Response.json({ name: User?.username, email: User?.username });
 }
