@@ -6,7 +6,7 @@ The dynamic nature of the URL means that we don’t need to create a separate pa
 Instead, by using square brackets (`[]`) around the route parameter (e.g., `blogId`), we can make the route dynamic. 
 This allows us to fetch the blog content for any given `blogId` dynamically without having to create separate pages for each blog post.
 */
-
+// When the user comes to localhost:3000/post/1 , they should see the post rendered from https://jsonplaceholder.typicode.com/posts/1 . It should be a server components, feel free to use axios
 import axios from "axios";  // Importing axios to make HTTP requests
 
 // The BlogPage function component will handle rendering the blog content based on the dynamic blogId
