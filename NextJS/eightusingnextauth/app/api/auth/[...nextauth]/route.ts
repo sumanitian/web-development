@@ -59,4 +59,3 @@ const handler = NextAuth({
 
 export {handler as GET, handler as POST}
 
-//ispe yeh next-auth install krnge na yeh khudh ek front bna kr dega ..jispe help krega ki jo credentials provide krnge us hisb ka woh frontend ka bana dega.. jitne credentials add krnge tb unka !
