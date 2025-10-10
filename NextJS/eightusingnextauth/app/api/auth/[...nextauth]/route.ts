@@ -41,12 +41,12 @@ const handler = NextAuth({
           }
         }),
         
-        GoogleProvider({            //yeh google wla sign ka method daal dega like sign in with google 
+        GoogleProvider({            //see sign with google
             clientId: "ABC",
             clientSecret: "ABC"
           }),
         
-          Github({            //yeh github wla sign ka method daal dega like sign in with github 
+          Github({            //see sign with github
             clientId: "ABC",
             clientSecret: "ABC"
           })
